@@ -15,8 +15,8 @@ form{
 	border-radius:6px;
 	padding:20px;
 }
-input[type="text"],
-input[type="number"]{
+input[type="text"].form,
+input[type="number"].form{
 	border: 1px solid #aaa;
 	border-radius:4px;
 	padding: 5px 10px 5px 10px;
@@ -34,14 +34,68 @@ label{
 	color:#333;
 }
 
+form .add-button{
+    border: 1px solid #000;
+    border-radius: 4px;
+    text-align: center;
+    width: 100px;
+    line-height: 24px;
+    margin-top: 18px;
+    background: linear-gradient(to bottom, #ddd, #ccc);	
+
+}
+
+form .add-button:hover{
+	box-shadow: 1px 1px 4px #999;
+}
+
+form .add-button:active{
+	box-shadow: inset 0px 0px 2px #333;
+}
+
 form .form-group{
 	margin-bottom:20px;
+	margin-right: 20px;
 }
 .left{
 	float:left;
+}
+.right{
+	float:right;
 }
 .clearfix{
 	clear:both;
 	overflow:hidden;
 	content:"";
 }
+a{
+	color:#000;
+	display:block;
+	text-decoration: none;
+}
+form.lista{
+	display:none;
+}
+ol li,
+ul li{
+	list-style: none;
+}
+
+form.lista table{
+	border-collapse: collapse;
+}
+form.lista table th{
+	text-align: left;
+	border:1px solid #000;
+}
+form.lista table th,
+form.lista table td{
+	padding:5px;
+}
+form.lista table td{
+	border: 1px solid;
+}
+form.lista table td input{
+	border: none;
+}
+
