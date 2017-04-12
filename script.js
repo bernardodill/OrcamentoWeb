@@ -13,17 +13,25 @@
 
 	
 	$('.campo-quantidade').on('input', function(){
-		quantidade = $(".campo-quantidade").unmask();
+		quantidade = $(".campo-quantidade").val();
 		
 	});
 
 	 
-	$('.campo-precoUnitario').mask('000.000.000.000.000,00', {reverse:true});
+	$('.campo-precoUnitario').mask('000.000,00', {reverse:true});
 	
 	$('.campo-precoUnitario').on('input', function(){
-		precoUnitario = $(".campo-precoUnitario").val();
+		precoUnitario = $('.campo-precoUnitario').val();
+		//console.log(precoUnitario);
+		
 	});
 	
+	function pontoVirgula(){
+		precoUnitario = precoUnitario.replace('.','');
+		
+		precoUnitario = precoUnitario.replace(',','.');
+		
+	}
 
 	function iniciaLista(){
 		if($(".lista").hasClass("hidden")){
@@ -47,6 +55,7 @@
 				"<td><input type='text' readonly class='input-lista' value='"+quantidade+"'></td>"+
 				"<td><input type='text' readonly class='input-lista' value='"+precoUnitario+"'></td>"+
 				"<td><input type='text' readonly class='input-lista' value='"+calculaSubTotal().toFixed(2)+"'></td>"+
+				"<td><a href='javascript:void(0)'>Remover Linha</a></td>"+
 			"</tr>"
 		);
 			
@@ -59,7 +68,7 @@
 			if($("form.lista").hasClass('hidden')){
 				iniciaLista();	
 			};
-			
+			pontoVirgula();
 			adicionaItem();
 		}
 	});
