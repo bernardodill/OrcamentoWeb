@@ -9,7 +9,7 @@ body{
 }
 form{
 	background-color: #fff;
-	width:800px;
+	width:824px;
 	margin:20px auto;
 	border: 1px solid;
 	border-radius:6px;
@@ -68,7 +68,7 @@ form .form-group{
 	overflow:hidden;
 	content:"";
 }
-a{
+.add-button a{
 	color:#000;
 	display:block;
 	text-decoration: none;
@@ -99,3 +99,9 @@ form.lista table td input{
 	border: none;
 }
 
+form.lista span.valor-total{
+	    float: right;
+    font-weight: 600;
+    font-size: 21px;
+    margin-top: 20px;
+}
