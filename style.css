@@ -1,61 +1,27 @@
 *{
 	box-sizing:border-box;
 }
+
+
 body{
-	margin: 0;
-	padding: 0;
-	background-color: #ddd;
+	margin:0;
+	padding:0;
 	font-family:Arial;
+	background-color: #ccc;
 }
-form{
+
+
+.formulario{
+	    width: 933px;
+	border:1px solid #000;
 	background-color: #fff;
-	width:824px;
 	margin:20px auto;
-	border: 1px solid;
-	border-radius:6px;
 	padding:20px;
 }
-input[type="text"].form,
-input[type="number"].form{
-	border: 1px solid #aaa;
-	border-radius:4px;
-	padding: 5px 10px 5px 10px;
-	display: block;
-	width:100%;
-	font-family:Arial;
-	font-size:12px;
-	box-shadow:inset 0px 1px 3px #aaa;
-}
-input:focus{
-	outline: none;
-}
-label{
-	font-weight:bold;
-	color:#333;
-}
 
-form .add-button{
-    border: 1px solid #000;
-    border-radius: 4px;
-    text-align: center;
-    width: 100px;
-    line-height: 24px;
-    margin-top: 18px;
-    background: linear-gradient(to bottom, #ddd, #ccc);	
-
-}
-
-form .add-button:hover{
-	box-shadow: 1px 1px 4px #999;
-}
-
-form .add-button:active{
-	box-shadow: inset 0px 0px 2px #333;
-}
-
-form .form-group{
-	margin-bottom:20px;
-	margin-right: 20px;
+.clearfix{
+	overflow:hidden;
+	clear:both;
 }
 .left{
 	float:left;
@@ -63,45 +29,95 @@ form .form-group{
 .right{
 	float:right;
 }
-.clearfix{
-	clear:both;
-	overflow:hidden;
-	content:"";
+
+.hidden{
+	visibility: hidden;
 }
-.add-button a{
-	color:#000;
-	display:block;
-	text-decoration: none;
+.form-group{
+	width:200px;
 }
-form.lista{
-	display:none;
+.form-group label{
+	
+	font-size:1.1em;
 }
-ol li,
-ul li{
-	list-style: none;
+.form-group input{
+	border:1px solid #666;
+	padding:5px 5px 5px 10px;
+	
+	box-shadow: inset 1px 1px 10px #ccc;
 }
 
-form.lista table{
-	border-collapse: collapse;
+.lista{
+	width: 933px;
+    margin: 0 auto;
+    border: 1px solid;
+    background-color: #fff;
 }
-form.lista table th{
+
+.lista table{
+	
+	    margin: 40px auto;
+    	border-collapse: collapse;
+        padding: 20px;
+}
+
+.lista table thead{
 	text-align: left;
-	border:1px solid #000;
-}
-form.lista table th,
-form.lista table td{
-	padding:5px;
-}
-form.lista table td{
-	border: 1px solid;
-}
-form.lista table td input{
-	border: none;
+	background-color: #ddd
 }
 
-form.lista span.valor-total{
-	    float: right;
-    font-weight: 600;
-    font-size: 21px;
+.lista table thead th{
+	font-weight: normal;
+	font-size:18px;
+	color:#304d71;
+}
+
+.lista table tbody td{
+	border-bottom: 1px solid #000;
+}
+
+.lista table tbody input{
+	padding:5px;
+	border:none;
+	font-size:16px;
+}
+
+.add-button a{
+	background-color: #c7c7c7;
+    padding: 4px 20px;
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+    display: block;
     margin-top: 20px;
+    border: 1px solid #999;
+    box-shadow: inset -1px -1px 1px #aaa;
+}
+
+.add-button a:hover{
+	box-shadow: inset -1px -1px 1px #888;
+}
+
+.add-button a:active{
+	box-shadow: inset 1px 1px 1px #aaa;
+}
+
+.valor-total{
+	float:right;
+	margin: 20px;
+	font-size: 24px;
+}
+
+
+.submit{
+	    margin: 20px;
+    border: 1px solid #ccc;
+    padding: 10px 30px;
+    font-size: 16px;
+}
+.submit:hover{
+	box-shadow: inset -1px -1px 2px #ccc;
+}
+.submit:active{
+	box-shadow: inset 1px 1px 2px #ccc;
 }

@@ -44,7 +44,7 @@
 
 	function formataNumero(valor){
 		if(valor.toString().indexOf(".") == -1){
-			return valor = parseFloat(valor).toFixed(2);
+			return valor = parseFloat(valor);
 		}
 		return valor;
 	}
@@ -53,10 +53,10 @@
 	function adicionaItem(){
 		$("form.lista table tbody").append(
 			"<tr>"+
-				"<td><input type='text' readonly class='input-lista' value='"+nomeItem+"'></td>"+
-				"<td><input type='text' readonly class='input-lista' value='"+quantidade+"'></td>"+
-				"<td><input type='text' readonly class='input-lista' value='"+formataNumero(precoUnitario)+"'></td>"+
-				"<td><input type='text' readonly class='input-lista subTotal' value='"+formataNumero(calculaSubTotal()).toFixed(2)+"'></td>"+
+				"<td><input type='text' name='fld-item[]' readonly class='input-lista' value='"+nomeItem+"'></td>"+
+				"<td><input type='text' name='fld-quantidade[]' readonly class='input-lista' value='"+quantidade+"'></td>"+
+				"<td><input type='text' name='fld-precoUnitario[]' readonly class='input-lista' value='"+formataNumero(precoUnitario)+"'></td>"+
+				"<td><input type='text' name='fld-subTotal[]' readonly class='input-lista subTotal' value='"+formataNumero(calculaSubTotal()).toFixed(2)+"'></td>"+
 				"<td class='r'><a href='javascript:void(0)' class='remove'>Excluir</a></td>"+
 			"</tr>"
 		);
@@ -103,7 +103,7 @@
 			total += parseFloat(this.value);
 
 		});
-		$(".valor-total").text("Total: R$ "+total.toFixed(2));
+		$(".valor-total").val("Total: R$ "+total.toFixed(2));
 	}
 
 

@@ -9,10 +9,10 @@
 		<script src="jquery.js" type="text/javascript"></script>
 		<script src="plugin/jquery.mask.js" type="text/javascript"></script>
 		
-		<form class="clearfix" action="" method="get">
+		<form class="clearfix formulario" action="" method="get">
 			<div class="form-group left">
 				<label>Item:</label>
-				<input type="text" placeholder="Nome do Item" class="form campo-nome" name="field-nome"/>
+				<input type="text" placeholder="Nome do Item" maxlength="38" class="form campo-nome" name="field-nome"/>
 			</div>
 			<div class="form-group left">
 				<label>Quantidade:</label>
@@ -27,7 +27,7 @@
 			</div>
 		</form>	
 
-		<form class="lista hidden clearfix" action="" method="post">
+		<form class="lista hidden" action="geraPDF.php" method="post">
 			<table>
 				<thead>
 					<tr>
@@ -35,16 +35,19 @@
 						<th>Quantidade</th>
 						<th>Preço Unitário (R$)</th>
 						<th>SubTotal (R$)</th>
+						<th>	</th>
 					</tr>
 				</thead>
 				<tbody>
 					
 				</tbody>
 			</table>
-			<span class="valor-total"></span>
-
-
+			<div class="clearfix">
+				<input type="text" class="valor-total" value="" name="valorTotal"/>
+				<input type="submit" value="Confirmar Pedido" class="submit"/>
+			</div>
 		</form>
+
 		<script type="text/javascript" src="script.js"></script>
 	</body>
 </html>
