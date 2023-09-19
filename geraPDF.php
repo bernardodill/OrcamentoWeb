@@ -1,5 +1,6 @@
 <?php
-	require("plugin/fpdf/fpdf.php");
+	require("plugin/fpdf186/fpdf.php");
+	require('plugin/fpdf186/makefont/makefont.php');
 
 
 	$arrayItens = $_POST["fld-item"];
@@ -12,10 +13,13 @@
 	
 	class PDF extends FPDF{
 
+		
+		
 
 
 		function Header(){
-			$this->Image('img/logo.png', 5, 5, 80);
+			$this->Image('img/logo.png', 5, 5, 35);
+
 		}
 	
 
@@ -38,6 +42,7 @@
 	$pdf = new PDF();
 	$pdf->AliasNbPages();
 	$pdf->AddPage();
+	
 	$pdf->SetFont('Arial','',18);
 	$pdf->Cell(150,18, "Orçamento", 0, 0, 'R');
 
